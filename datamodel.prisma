@@ -1,0 +1,12 @@
+type Project {
+  id: ID! @id
+  name: String!
+  tasks: [Task!]!
+}
+
+type Task {
+  id: ID! @id
+  title: String!
+  project: Project!
+  isCompleted: Boolean! @default(value: false)
+}
